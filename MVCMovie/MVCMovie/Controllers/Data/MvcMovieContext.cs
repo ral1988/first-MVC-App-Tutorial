@@ -5,11 +5,16 @@ namespace MvcMovie.Data
 {
     public class MvcMovieContext : DbContext
     {
+        MvcMovieContext()
+            : base()
+        {
+
+        }
         public MvcMovieContext (DbContextOptions<MvcMovieContext> options)
             : base(options)
         {
         }
 
-        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Movie> Movie { get; set; }
     }
 }
